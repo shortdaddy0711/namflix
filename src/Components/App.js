@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import Routes from './Router';
 import GlobalStyles from './GlobalStyles';
 
-class App extends Component {
+// eslint-disable-next-line react/prefer-stateless-function
+class App extends React.Component {
   render() {
     return (
       <>

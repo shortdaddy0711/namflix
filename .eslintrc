@@ -1,0 +1,19 @@
+{
+  "extends": ["airbnb", "plugin:prettier/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": ["error", { "singleQuote": true, "parser": "flow" }],
+    "semi": 2,
+    "jsx-quotes": ["error", "prefer-double"],
+    "quotes": [2, "single", "avoid-escape"],
+    "react/jsx-filename-extension": [0, { "extensions": [".js", ".jsx"] }],
+    "import/extensions": "off"
+  },
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  }
+}
