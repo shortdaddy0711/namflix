@@ -6,24 +6,31 @@ export default class extends React.Component {
   constructor(props) {
     super(props);
     const {
+      // eslint-disable-next-line react/prop-types
       location: { pathname },
     } = props;
     this.state = {
       result: null,
       error: null,
       loading: true,
+      // eslint-disable-next-line react/prop-types
       isMovie: pathname.includes('/movie/'),
     };
   }
 
+  // eslint-disable-next-line consistent-return
   async componentDidMount() {
     const {
+      // eslint-disable-next-line react/prop-types
       match: {
+        // eslint-disable-next-line react/prop-types
         params: { id },
       },
+      // eslint-disable-next-line react/prop-types
       history: { push },
     } = this.props;
     const { isMovie } = this.state;
+    // eslint-disable-next-line radix
     const parsedId = parseInt(id);
     if (Number.isNaN(parsedId)) {
       return push('/');
@@ -44,6 +51,8 @@ export default class extends React.Component {
 
   render() {
     const { result, error, loading } = this.state;
+    // eslint-disable-next-line no-console
+    console.log(result);
     return <DetailPresenter result={result} error={error} loading={loading} />;
   }
 }

@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-one-expression-per-line */
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
@@ -10,10 +11,10 @@ const Container = styled.div`
 
 const Image = styled.div`
   background-image: url(${(props) => props.bgUrl});
-  height: 180px;
   background-size: cover;
-  border-radius: 4px;
   background-position: center center;
+  height: 180px;
+  border-radius: 4px;
   transition: opacity 0.15s linear;
 `;
 
@@ -61,7 +62,9 @@ const Poster = ({ id, imageUrl, title, rating, year, isMovie = false }) => (
           {rating}/10
         </Rating>
       </ImageContainer>
-      <Title>{title}</Title>
+      <Title>
+        {title.length > 18 ? `${title.substring(0, 15)}...` : title}
+      </Title>
       <Year>{year}</Year>
     </Container>
   </Link>
@@ -72,7 +75,8 @@ Poster.propTypes = {
   imageUrl: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   rating: PropTypes.number.isRequired,
-  year: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  year: PropTypes.string,
   isMovie: PropTypes.bool.isRequired,
 };
 
