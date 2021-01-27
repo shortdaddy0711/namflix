@@ -53,7 +53,7 @@ const Title = styled.h3`
   font-size: 32px;
 `;
 
-const ItemContainer = styled.span`
+const ItemContainer = styled.div`
   margin: 20px 0;
 `;
 
