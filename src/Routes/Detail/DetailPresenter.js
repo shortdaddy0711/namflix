@@ -40,7 +40,7 @@ const Cover = styled.div`
   background-position: center center;
   background-size: cover;
   width: 30%;
-  height: 100%;
+  height: 70%;
   border-radius: 10px;
 `;
 
@@ -75,14 +75,15 @@ const YoutubeContainer = styled.div`
   width: 100%;
   padding-bottom: 56.25%;
   height: 0;
+  margin: 20px 0;
 `;
 
 const Youtube = styled.iframe`
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 50%;
+  height: 50%;
 `;
 
 const DetailPresenter = ({ result, error, loading }) =>
