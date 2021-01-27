@@ -70,6 +70,21 @@ const Overview = styled.p`
   width: 50%;
 `;
 
+const YoutubeContainer = styled.div`
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%;
+  height: 0;
+`;
+
+const Youtube = styled.iframe`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+`;
+
 const DetailPresenter = ({ result, error, loading }) =>
   loading ? (
     <Loader />
@@ -113,6 +128,17 @@ const DetailPresenter = ({ result, error, loading }) =>
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+          <YoutubeContainer>
+            <Youtube
+              src={
+                result.videos.results[0]
+                  ? `https://www.youtube.com/embed/${result.videos.results[0].key}`
+                  : 'https://www.youtube.com/embed/el2muxlkPKA'
+              }
+              frameborder="0"
+              allowfullscreen
+            />
+          </YoutubeContainer>
         </Data>
       </Content>
       {error && <Message text={error} color="e74c3c" />}
