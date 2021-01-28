@@ -7,7 +7,7 @@ import Message from '../../Components/Message';
 import Poster from '../../Components/Poster';
 
 const Container = styled.div`
-  padding: 0px 20px;
+  padding: 20px 20px;
 `;
 
 const Form = styled.form`
@@ -32,7 +32,7 @@ const SearchPresenter = ({
   <Container>
     <Form onSubmit={handleSubmit}>
       <Input
-        placeholder="Search Movied or TV Shows..."
+        placeholder="Search Movie or TV Shows..."
         value={searchTerm}
         onChange={updateTerm}
       />
