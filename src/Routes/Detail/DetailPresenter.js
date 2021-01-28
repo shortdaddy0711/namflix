@@ -39,13 +39,13 @@ const Cover = styled.div`
   background-image: url(${(props) => props.bgImage});
   background-position: center center;
   background-size: cover;
-  width: 30%;
+  width: 50%;
   height: 70%;
   border-radius: 10px;
 `;
 
 const Data = styled.div`
-  width: 70%;
+  width: 50%;
   margin-left: 10px;
 `;
 
@@ -64,15 +64,15 @@ const Divider = styled.span`
 `;
 
 const Overview = styled.p`
-  font-size: 12px;
+  font-size: 15px;
   opacity: 0.7;
   line-height: 1.5;
-  width: 50%;
+  width: 90%;
 `;
 
 const YoutubeContainer = styled.div`
   position: relative;
-  width: 100%;
+  width: 90%;
   padding-bottom: 56.25%;
   height: 0;
   margin: 20px 0;
@@ -82,8 +82,8 @@ const Youtube = styled.iframe`
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 50%;
+  width: 100%;
+  height: 100%;
 `;
 
 const DetailPresenter = ({ result, error, loading }) =>
