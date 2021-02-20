@@ -8,7 +8,6 @@ const Container = styled.div`
   justify-content: center;
   font-size: 32px;
   margin-top: 20px;
-  font-
 `;
 
 export default () => (

@@ -65,11 +65,11 @@ const HomePresenter = ({ nowPlaying, popular, upcoming, loading, error }) =>
   );
 
 HomePresenter.propTypes = {
-  nowPlaying: PropTypes.arrayOf.isRequired,
-  popular: PropTypes.arrayOf.isRequired,
-  upcoming: PropTypes.arrayOf.isRequired,
+  nowPlaying: PropTypes.array,
+  popular: PropTypes.array,
+  upcoming: PropTypes.array,
   loading: PropTypes.bool.isRequired,
-  error: PropTypes.string.isRequired,
+  error: PropTypes.string,
 };
 
 export default HomePresenter;

@@ -1,12 +1,13 @@
 import axios from 'axios';
-import APIKey from './apiKey';
+
+require('dotenv').config();
 
 const api = axios.create({
-  baseURL: 'https://api.themoviedb.org/3/',
-  params: {
-    api_key: APIKey,
-    language: 'en-US',
-  },
+	baseURL: 'https://api.themoviedb.org/3/',
+	params: {
+		api_key: process.env.REACT_APP_API_KEY,
+		language: 'en-US',
+	},
 });
 
 const appendParam = (val) => {
